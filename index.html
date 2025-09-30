@@ -1,698 +1,347 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Power yoga z Sasha </title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 10px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.collection-content td {
-	white-space: pre-wrap;
-	word-break: break-word;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.callout img.notion-static-icon {
-	width: 1em;
-	height: 1em;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-blockquote.quote-large {
-	font-size: 1.25em;
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray {
-	color: rgba(128, 125, 120, 1);
-	fill: rgba(128, 125, 120, 1);
-}
-.highlight-brown {
-	color: rgba(159, 118, 90, 1);
-	fill: rgba(159, 118, 90, 1);
-}
-.highlight-orange {
-	color: rgba(204, 121, 47, 1);
-	fill: rgba(204, 121, 47, 1);
-}
-.highlight-yellow {
-	color: rgba(195, 148, 67, 1);
-	fill: rgba(195, 148, 67, 1);
-}
-.highlight-teal {
-	color: rgba(80, 148, 110, 1);
-	fill: rgba(80, 148, 110, 1);
-}
-.highlight-blue {
-	color: rgba(63, 126, 190, 1);
-	fill: rgba(63, 126, 190, 1);
-}
-.highlight-purple {
-	color: rgba(154, 107, 180, 1);
-	fill: rgba(154, 107, 180, 1);
-}
-.highlight-pink {
-	color: rgba(179, 84, 136, 1);
-	fill: rgba(179, 84, 136, 1);
-}
-.highlight-red {
-	color: rgba(201, 85, 73, 1);
-	fill: rgba(201, 85, 73, 1);
-}
-.highlight-default_background {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray_background {
-	background: rgba(42, 28, 0, 0.07);
-}
-.highlight-brown_background {
-	background: rgba(139, 46, 0, 0.086);
-}
-.highlight-orange_background {
-	background: rgba(224, 101, 1, 0.129);
-}
-.highlight-yellow_background {
-	background: rgba(211, 168, 0, 0.137);
-}
-.highlight-teal_background {
-	background: rgba(0, 100, 45, 0.09);
-}
-.highlight-blue_background {
-	background: rgba(0, 111, 200, 0.09);
-}
-.highlight-purple_background {
-	background: rgba(102, 0, 178, 0.078);
-}
-.highlight-pink_background {
-	background: rgba(197, 0, 93, 0.086);
-}
-.highlight-red_background {
-	background: rgba(223, 22, 0, 0.094);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(128, 125, 120, 1);
-	fill: rgba(128, 125, 120, 1);
-}
-.block-color-brown {
-	color: rgba(159, 118, 90, 1);
-	fill: rgba(159, 118, 90, 1);
-}
-.block-color-orange {
-	color: rgba(204, 121, 47, 1);
-	fill: rgba(204, 121, 47, 1);
-}
-.block-color-yellow {
-	color: rgba(195, 148, 67, 1);
-	fill: rgba(195, 148, 67, 1);
-}
-.block-color-teal {
-	color: rgba(80, 148, 110, 1);
-	fill: rgba(80, 148, 110, 1);
-}
-.block-color-blue {
-	color: rgba(63, 126, 190, 1);
-	fill: rgba(63, 126, 190, 1);
-}
-.block-color-purple {
-	color: rgba(154, 107, 180, 1);
-	fill: rgba(154, 107, 180, 1);
-}
-.block-color-pink {
-	color: rgba(179, 84, 136, 1);
-	fill: rgba(179, 84, 136, 1);
-}
-.block-color-red {
-	color: rgba(201, 85, 73, 1);
-	fill: rgba(201, 85, 73, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(240, 239, 237, 1);
-}
-.block-color-brown_background {
-	background: rgba(245, 237, 233, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 235, 222, 1);
-}
-.block-color-yellow_background {
-	background: rgba(249, 243, 220, 1);
-}
-.block-color-teal_background {
-	background: rgba(232, 241, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(232, 242, 250, 1);
-}
-.block-color-purple_background {
-	background: rgba(243, 235, 249, 1);
-}
-.block-color-pink_background {
-	background: rgba(250, 233, 241, 1);
-}
-.block-color-red_background {
-	background: rgba(252, 233, 231, 1);
-}
-.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
-.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
-.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
-.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
-.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
-.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
-.select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
-.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
-.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
-.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="27e6b532-45c4-8032-9141-ca3d0c261b95" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🌿</span></div><h1 class="page-title">Power yoga z Sasha </h1><p class="page-description"></p></header><div class="page-body"><h1 id="27e6b532-45c4-8076-837a-ee645849a7e9" class="">O mnie</h1><h3 id="27e6b532-45c4-80af-8f5e-f20715c0258f" class="">Jestem Sasha, certyfikowaną nauczycielką jogi (USA Yoga Alliance RYT200). Prowadzę zajęcia siłowej jogi, które łączą moc ciała z wewnętrznym spokojem. Stale rozwijam się i szkolę, aby oferować praktyki najwyższej jakości.</h3><p id="27e6b532-45c4-8090-b645-cc0bf444451a" class="">Siłowa joga to dokładnie to, czego potrzebuje współczesny człowiek, aby radzić sobie z codziennym stresem – pomaga uwalniać nadmiar hormonu stresu (kortyzolu), wzmacnia ciało i mięśnie (szczególnie ważne dla osób po 30. roku życia), a także buduje wytrzymałość ciała, a tym samym ducha ✨</p><p id="27e6b532-45c4-8022-8901-e0586900c323" class="">„<em>Joga daje ludziom po traumie możliwość ponownego poczucia, że mogą być obecni w swoim ciele tu i teraz – bez unikania go i bez poczucia zagrożenia.”— Bessel van der Kolk, „The Body Keeps the Score” (Ciało zna rachunek)</em></p><h1 id="27e6b532-45c4-8013-b1a4-d99fd3bcb6e3" class="">Harmonogram </h1><table id="27e6b532-45c4-801d-9b17-d4c4a1960de3" class="simple-table"><tbody><tr id="27e6b532-45c4-8078-bb25-e0e08f20e78d"><td id="fwlS" class="" style="width:191.5px"><strong>Dzień tygodnia</strong></td><td id="mB~u" class="" style="width:191.5px"><strong>Godzina</strong></td></tr><tr id="27e6b532-45c4-80d0-a02f-eacf7438bf7d"><td id="fwlS" class="" style="width:191.5px"><strong>🕣Pon.-Sob</strong>.</td><td id="mB~u" class="" style="width:191.5px"><strong>8:30</strong></td></tr><tr id="27e6b532-45c4-80ba-935c-c4d1e75d1f01"><td id="fwlS" class="" style="width:191.5px"><strong>🌙 Wtorek</strong> </td><td id="mB~u" class="" style="width:191.5px"><strong>19:15</strong></td></tr><tr id="27e6b532-45c4-8024-b9fe-c8712949d962"><td id="fwlS" class="" style="width:191.5px"><strong>🌙 Piątek</strong> </td><td id="mB~u" class="" style="width:191.5px"><strong>20:15</strong></td></tr></tbody></table><h1 id="27e6b532-45c4-8075-adaa-f4ed5dd9bf39" class="">Cennik</h1><table id="27e6b532-45c4-809c-8dd7-f4ce7a758665" class="simple-table"><tbody><tr id="27e6b532-45c4-807b-942f-c5ec5a3e719b"><td id="tUAH" class="" style="width:127.66666666666667px">Pojedyncze wejście </td><td id="T{&gt;M" class="" style="width:127.66666666666667px">50 zl</td><td id="ghnm" class="" style="width:127.66666666666667px"></td></tr><tr id="27e6b532-45c4-80c8-9371-ed5af057979b"><td id="tUAH" class="" style="width:127.66666666666667px">Karnet 4 wejścia w miesiącu </td><td id="T{&gt;M" class="" style="width:127.66666666666667px">170 zl</td><td id="ghnm" class="" style="width:127.66666666666667px">Ważny 4 tygodnie od momentu zakupu karnetu</td></tr><tr id="27e6b532-45c4-8041-af05-eaa03d719d0b"><td id="tUAH" class="" style="width:127.66666666666667px">Karnet 6 wejść w miesiącu </td><td id="T{&gt;M" class="" style="width:127.66666666666667px">240 zl</td><td id="ghnm" class="" style="width:127.66666666666667px">Ważny 5 tygodni od momentu zakupu karnetu</td></tr><tr id="27e6b532-45c4-80f5-90d7-cf189aef2afe"><td id="tUAH" class="" style="width:127.66666666666667px">Karnet 8 wejść w miesiącu</td><td id="T{&gt;M" class="" style="width:127.66666666666667px">320 zl</td><td id="ghnm" class="" style="width:127.66666666666667px">Ważny 5 tygodni od momentu zakupu karnetu</td></tr><tr id="27e6b532-45c4-80dd-8265-f717d826ad73"><td id="tUAH" class="" style="width:127.66666666666667px">Karnet Open</td><td id="T{&gt;M" class="" style="width:127.66666666666667px">490 zl</td><td id="ghnm" class="" style="width:127.66666666666667px">Ważny 6 tygodni od momentu zakupu karnetu</td></tr></tbody></table><h1 id="27e6b532-45c4-800f-a761-eb36880606e9" class="">Zapisy</h1><p id="27e6b532-45c4-8003-a6c4-d9b8a65c1628" class=""><a href="https://forms.gle/ovo1K1sYJwPQWVte6">https://forms.gle/ovo1K1sYJwPQWVte6</a></p><h1 id="27e6b532-45c4-80b9-989f-c08e8830947a" class="">Kontakt</h1><p id="27e6b532-45c4-8047-964f-e9b2ea646713" class="">WhatsApp: <a href="https://wa.me/48786213901">https://wa.me/48786213901</a></p><p id="27e6b532-45c4-80f4-9beb-f43757609700" class="">Instagram: <a href="https://www.instagram.com/sasha.krasovytska?igsh=c3dydDduNnd6NWVj">https://www.instagram.com/sasha.krasovytska?igsh=c3dydDduNnd6NWVj</a></p><h1 id="27e6b532-45c4-8055-a7dc-d123b579c2dc" class="">Opinie</h1><p id="27e6b532-45c4-80c3-b972-eea0cfd1523a" class="">
-</p><p id="27e6b532-45c4-8066-9d00-ec5cdd44acd8" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power yoga z Sasha</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            background: #191919;
+        }
+        
+        .cover-image {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+            object-position: center 50%;
+            display: block;
+        }
+        
+        .header-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin: -2rem auto 1rem;
+            background: #191919;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+        }
+        
+        p {
+            margin: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.81);
+        }
+        
+        blockquote {
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.81);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 2rem;
+        }
+        
+        th, td {
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background: rgba(255, 255, 255, 0.055);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        td {
+            color: rgba(255, 255, 255, 0.81);
+        }
+        
+        tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        a {
+            color: rgb(147, 197, 253);
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.055);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        
+        .btn.primary:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #63408a 100%);
+        }
+        
+        .btn.whatsapp {
+            background: #25D366;
+            border: none;
+        }
+        
+        .btn.whatsapp:hover {
+            background: #20BA5A;
+        }
+        
+        .btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            border: none;
+        }
+        
+        .btn.instagram:hover {
+            background: linear-gradient(45deg, #d87e2c 0%,#cf5a33 25%,#c5203a 50%,#b51d5a 75%,#a8157a 100%);
+        }
+        
+        .map-container {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        .address {
+            background: rgba(255, 255, 255, 0.055);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            color: rgba(255, 255, 255, 0.81);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="cover-image" src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb" alt="Power Yoga Cover">
+    
+    <div class="container">
+        <div class="header-icon">🌿</div>
+        <h1>Power yoga z Sasha</h1>
+        
+        <h2>O mnie</h2>
+        <h3>Jestem Sasha, certyfikowaną nauczycielką jogi (USA Yoga Alliance RYT200). Prowadzę zajęcia siłowej jogi, które łączą moc ciała z wewnętrznym spokojem. Stale rozwijam się i szkolę, aby oferować praktyki najwyższej jakości.</h3>
+        
+        <p>Siłowa joga to dokładnie to, czego potrzebuje współczesny człowiek, aby radzić sobie z codziennym stresem – pomaga uwalniać nadmiar hormonu stresu (kortyzolu), wzmacnia ciało i mięśnie (szczególnie ważne dla osób po 30. roku życia), a także buduje wytrzymałość ciała, a tym samym ducha ✨</p>
+        
+        <blockquote>
+            „Joga daje ludziom po traumie możliwość ponownego poczucia, że mogą być obecni w swoim ciele tu i teraz – bez unikania go i bez poczucia zagrożenia."— Bessel van der Kolk, „The Body Keeps the Score" (Ciało zna rachunek)
+        </blockquote>
+        
+        <h2>Harmonogram</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dzień tygodnia</th>
+                    <th>Godzina</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>🕣 Pon.-Sob.</strong></td>
+                    <td><strong>8:30</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🌙 Wtorek</strong></td>
+                    <td><strong>19:15</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🌙 Piątek</strong></td>
+                    <td><strong>20:15</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Cennik</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rodzaj</th>
+                    <th>Cena</th>
+                    <th>Uwagi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pojedyncze wejście</td>
+                    <td>50 zł</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Karnet 4 wejścia w miesiącu</td>
+                    <td>170 zł</td>
+                    <td>Ważny 4 tygodnie od momentu zakupu karnetu</td>
+                </tr>
+                <tr>
+                    <td>Karnet 6 wejść w miesiącu</td>
+                    <td>240 zł</td>
+                    <td>Ważny 5 tygodni od momentu zakupu karnetu</td>
+                </tr>
+                <tr>
+                    <td>Karnet 8 wejść w miesiącu</td>
+                    <td>320 zł</td>
+                    <td>Ważny 5 tygodni od momentu zakupu karnetu</td>
+                </tr>
+                <tr>
+                    <td>Karnet Open</td>
+                    <td>490 zł</td>
+                    <td>Ważny 6 tygodni od momentu zakupu karnetu</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Zapisy na zajęcia</h2>
+        <div class="highlight-box">
+            <p style="margin: 0 0 12px;"><strong>Gotowa/y na pierwszą praktykę?</strong> Zapisz się już dziś! Wybierz najwygodniejszą dla Ciebie formę kontaktu:</p>
+            <div class="buttons">
+                <a class="btn primary" href="https://forms.gle/ovo1K1sYJwPQWVte6" target="_blank" rel="noopener" aria-label="Zapisz się na zajęcia przez formularz online">
+                    <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
+                        <path d="M8 4C6.89543 4 6 4.89543 6 6V42C6 43.1046 6.89543 44 8 44H40C41.1046 44 42 43.1046 42 42V14L32 4H8Z" fill="#7C4DFF"/>
+                        <path d="M32 4V14H42" fill="#B39DDB"/>
+                        <path d="M16 24H32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 30H32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 36H26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Zapisz się online
+                </a>
+                <a class="btn whatsapp" href="https://wa.me/48786213901" target="_blank" rel="noopener" aria-label="Skontaktuj się przez WhatsApp">
+                    <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 4C12.9543 4 4 12.9543 4 24C4 27.2857 4.85714 30.4286 6.4 33.1429L4.11429 42.2857C3.88571 43.0857 4.65714 43.8571 5.45714 43.6286L14.7429 41.4C17.4 42.8571 20.5714 43.7143 24 43.7143C35.0457 43.7143 44 34.7143 44 23.7143C44 12.7143 35.0457 4 24 4Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.8 13.2C32.5714 10.9714 29.4286 9.71429 26.2857 9.71429C19.6571 9.71429 14.2857 15.0857 14.2857 21.7143C14.2857 23.9429 14.9143 26.1714 16.1714 28.0571L14.2857 34.2857L20.7429 32.4C22.5143 33.5429 24.4 34.1143 26.2857 34.1143C32.9143 34.1143 38.2857 28.7429 38.2857 22.1143C38.2857 18.9714 37.0286 15.4286 34.8 13.2ZM26.2857 32.4C24.5143 32.4 22.8571 31.8857 21.3143 30.9714L20.9714 30.7429L16.7429 31.8857L17.9429 27.7714L17.7143 27.4286C16.7429 25.8286 16.1143 23.8286 16.1143 21.7143C16.1143 16.1143 20.6857 11.5429 26.2857 11.5429C29.0286 11.5429 31.6571 12.6286 33.6571 14.5714C35.6571 16.5143 36.4571 19.2 36.4571 22C36.4571 27.6571 31.8857 32.4 26.2857 32.4ZM31.8857 24.5714C31.6 24.4 30.1714 23.7143 29.9429 23.6C29.7143 23.5429 29.5429 23.4857 29.3714 23.7714C29.2 24.0571 28.6857 24.6857 28.5143 24.8571C28.3429 25.0286 28.2286 25.0857 27.9429 24.9714C27.6571 24.8571 26.7429 24.5143 25.6571 23.5429C24.8 22.8 24.2286 21.8857 24.1143 21.6C24 21.3143 24.1143 21.2 24.2286 21.0857C24.3429 20.9714 24.4571 20.8 24.5714 20.6286C24.6857 20.4571 24.7429 20.3429 24.8 20.1714C24.8571 20 24.8 19.8286 24.7429 19.7143C24.6857 19.6 24.1143 18.1714 23.8857 17.6C23.7143 17.0857 23.4857 17.1429 23.3143 17.1429C23.1429 17.1429 22.9714 17.1429 22.8 17.1429C22.6286 17.1429 22.3429 17.2 22.1143 17.4857C21.8857 17.7714 21.2 18.4571 21.2 19.8857C21.2 21.3143 22.1714 22.6857 22.2857 22.8571C22.4 23.0286 24.2286 25.8286 27.0286 27.0857C29.8286 28.3429 29.8286 27.8857 30.5714 27.8286C31.3143 27.7714 32.4571 27.1429 32.6857 26.5143C32.9143 25.8857 32.9143 25.3143 32.8571 25.2C32.8 25.0286 32.1714 24.6857 31.8857 24.5714Z" fill="#25D366"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                <a class="btn instagram" href="https://www.instagram.com/sasha.krasovytska" target="_blank" rel="noopener" aria-label="Sprawdź profil na Instagramie">
+                    <svg width="22" height="22" viewBox="0 0 48 48" fill="white">
+                        <path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70313 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z"/>
+                        <path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z"/>
+                        <path d="M36.7875 14.0344C38.4028 14.0344 39.7125 12.7247 39.7125 11.1094C39.7125 9.49405 38.4028 8.18436 36.7875 8.18436C35.1722 8.18436 33.8625 9.49405 33.8625 11.1094C33.8625 12.7247 35.1722 14.0344 36.7875 14.0344Z"/>
+                    </svg>
+                    Instagram
+                </a>
+            </div>
+        </div>
+        
+        <h2>Lokalizacja</h2>
+        <div class="address">
+            <strong>Zdrowe Kręgi Fizjoterapia & Trening Medyczny</strong><br>
+            Chabrowa 4, 52-200 Wysoka
+        </div>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.4!2d16.8977!3d51.0976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc27f6c5e2a8d%3A0x5c8c7e1c0d8e7a9c!2sChabrowa%204%2C%2052-200%20Wysoka!5e0!3m2!1spl!2spl!4v1234567890"
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa lokalizacji zajęć">
+            </iframe>
+        </div>
+        
+        <h2>Opinie</h2>
+        <p style="color: rgba(255, 255, 255, 0.6); font-style: italic;">Opinie naszych uczestników pojawią się wkrótce...</p>
+    </div>
+</body>
+</html>
