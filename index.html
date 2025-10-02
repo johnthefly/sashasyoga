@@ -195,6 +195,37 @@
             color: rgba(255, 255, 255, 0.81);
         }
         
+        .testimonials-container {
+            position: relative;
+            min-height: 120px;
+            margin: 2rem 0;
+        }
+        
+        .testimonial {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background: rgba(255, 255, 255, 0.055);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 3px solid #77B255;
+        }
+        
+        .testimonial.active {
+            opacity: 1;
+            position: relative;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            line-height: 1.8;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -348,7 +379,38 @@
         </div>
         
         <h2>Opinie</h2>
-        <p style="color: rgba(255, 255, 255, 0.6); font-style: italic;">Opinie naszych uczestników pojawią się wkrótce...</p>
+        <div class="testimonials-container">
+            <div class="testimonial active">
+                <p>Bardzo lubię jogę z Sashą, na jej zajęciach czuję się dobrze i bezpiecznie. Praktyka jest urozmaicona. Wracam zawsze chętnie. Jestem ciekawa moich postępów w jodze i oddychaniu.</p>
+            </div>
+            <div class="testimonial">
+                <p>Zajęcia są niesamowite. Za każdym razem zupełnie inne. Za każdym razem Intensywne. Sprawiają że mam lepszą kondycję, a jednocześnie jestem zrelaksowana.</p>
+            </div>
+            <div class="testimonial">
+                <p>Balans pomiędzy wysiłkiem fizycznym i skupieniem się na tym co wewnątrz.</p>
+            </div>
+            <div class="testimonial">
+                <p>Trafiłam do Saszy przypadkiem. Zostanę na długo.</p>
+            </div>
+            <div class="testimonial">
+                <p>Bardzo lubię praktykę jogi z Sashą! Zawsze dobrze się czuję po zajęciach.</p>
+            </div>
+            <div class="testimonial">
+                <p>Świetne praktyki. Idealne dla osób które potrzebują większego powera.</p>
+            </div>
+        </div>
+        <script>
+            let currentTestimonial = 0;
+            const testimonials = document.querySelectorAll('.testimonial');
+            
+            function rotateTestimonials() {
+                testimonials[currentTestimonial].classList.remove('active');
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                testimonials[currentTestimonial].classList.add('active');
+            }
+            
+            setInterval(rotateTestimonials, 5000);
+        </script>
     </div>
 </body>
 </html>
